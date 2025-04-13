@@ -26,7 +26,8 @@ const Index = () => {
   return (
     <AOS>
 
-    <Helmet>
+      <Helmet>
+  <meta name="google-site-verification" content="5jurhgW_xuXDi6cM4y4HWKpeeXPM5dGzd-qg-h_HKMU" />
   <title>Abiola Daniel Ogunsola | Full-Stack Developer</title>
   <meta name="description" content="Portfolio of Ogunsola Abiola Daniel - Full-Stack Developer specialized in building beautiful and scalable web apps." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
