@@ -16,6 +16,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import AOS from "@/components/AOS";
 import { Helmet } from "react-helmet";
+import primg from '@/assets/images/img.jpeg'
 
 const Index = () => {
   useEffect(() => {
@@ -34,7 +35,7 @@ const Index = () => {
   <meta property="og:description" content="Check out my web developer portfolio and get in touch for collaborations." />
   <meta property="og:url" content="https://ogunsola-abiola-daniel.vercel.app/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://ogunsola-abiola-daniel.vercel.app/og-image.jpg" />
+  <meta property="og:image" content="https://github.com/OgunsolaAbiolaDaniel.png" />
 </Helmet>
       <div className="min-h-screen flex flex-col">
         <Navbar />
