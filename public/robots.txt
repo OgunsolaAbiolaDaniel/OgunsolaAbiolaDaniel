@@ -1,5 +1,7 @@
-User-agent: Googlebot
+User-agent: *
 Allow: /
+
+Sitemap: https://ogunsolaabioladaniel.github.io/OgunsolaAbiolaDaniel/sitemap.xml
 
 User-agent: Bingbot
 Allow: /

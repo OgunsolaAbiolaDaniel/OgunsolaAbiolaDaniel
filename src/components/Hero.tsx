@@ -53,7 +53,9 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-5 sm:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-light">
+    
+      </div>
+      <div className="absolute w-full justify-center  bottom-10 flex  min-md:left-1/2 transform -translate-x-1/2 animate-bounce-light">
           <Button 
             variant="ghost" 
             size="icon" 
@@ -63,7 +65,6 @@ const Hero = () => {
             <ArrowDown size={24} />
           </Button>
         </div>
-      </div>
     </section>
   );
 };
