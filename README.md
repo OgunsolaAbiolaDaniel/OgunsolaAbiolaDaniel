@@ -63,8 +63,3 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=ogunsolaabioladaniel&show_icons=true&locale=en" alt="ogunsolaabioladaniel" />&nbsp;
 </p
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=ogunsolaabioladaniel" alt="ogunsolaabioladaniel" /></a> </p>
-
-<<<<<<< HEAD
-
-=======
->>>>>>> ad48458 (Main commit)
