@@ -2,18 +2,19 @@ import React from 'react'
 
 function BuyMeACoffee() {
   return (
-  <a
+     <a
       href="https://www.buymeacoffee.com/OgunsolaAbiolaDaniel"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-[11%] w-100px right-3 z-50 rounded-full"
+      className="fixed bottom-4 right-4 z-50"
     >
       <img
         src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
         alt="Buy Me A Coffee"
-        className="h-11 w-fit drop-shadow-lg hover:scale-105 transition-transform duration-300"
-          />
+        className="w-40 h-12 sm:w-[217px] sm:h-[60px] hover:scale-105 transition-transform duration-300"
+      />
     </a>
+    
   );
 };
 
