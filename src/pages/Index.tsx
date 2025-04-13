@@ -25,18 +25,22 @@ const Index = () => {
 
   return (
     <AOS>
-  <Helmet>
-  <meta name="google-site-verification" content="5jurhgW_xuXDi6cM4y4HWKpeeXPM5dGzd-qg-h_HKMU" />
-  <title>Abiola Daniel Ogunsola | Full-Stack Developer</title>
-  <meta name="description" content="Portfolio of Ogunsola Abiola Daniel - Full-Stack Developer specialized in building beautiful and scalable web apps." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Ogunsola Abiola Daniel" />
-  <meta property="og:title" content="Abiola Daniel Ogunsola | Full-Stack Developer" />
-  <meta property="og:description" content="Check out my web developer portfolio and get in touch for collaborations." />
-  <meta property="og:url" content="https://ogunsola-abiola-daniel.vercel.app/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://github.com/OgunsolaAbiolaDaniel.png" />
-</Helmet>
+ <Helmet>
+        <title>Abiola Daniel Ogunsola - Frontend Developer</title>
+        <meta
+          name="description"
+          content="Frontend Engineer | React, Next.js, Tailwind | Passionate about building modern, accessible, and high-performance user interfaces."
+        />
+        <meta property="og:title" content="Abiola Daniel Ogunsola - Frontend Developer" />
+        <meta
+          property="og:description"
+          content="Skilled Frontend Developer passionate about design, performance, and building impactful solutions. Explore my portfolio and work."
+        />
+        <meta property="og:image" content="https://github.com/OgunsolaAbiolaDaniel.png" />
+        <meta property="og:url" content="https://ogunsola-abiola-daniel.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <div className="min-h-screen flex flex-col">
         <Navbar />
         
