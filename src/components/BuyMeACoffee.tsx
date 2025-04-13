@@ -6,7 +6,7 @@ function BuyMeACoffee() {
       href="https://www.buymeacoffee.com/OgunsolaAbiolaDaniel"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-[11%]  right-3 z-50 rounded-full"
+      className="fixed bottom-[11%] w-100px right-3 z-50 rounded-full"
     >
       <img
         src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
