@@ -57,17 +57,17 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
+    <header className={`fixed top-0 w-full z-50 transition-all  duration-300 ${isScrolled ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 md:py-4">
           <div className="flex items-center">
-            <a href="#" className="text-lg sm:text-xl font-bold text-portfolio-primary">
-              Abiola Daniel
+            <a href="#" className={`text-lg sm:text-xl font-bold p-5 rounded-full shadow-md bg-white text-portfolio-primary ${isScrolled?'border-portfolio-accent':''}`}>
+              AO
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-1 overflow-x-auto no-scrollbar">
+          <nav className="hidden md:flex space-x-1 overflow-x-auto py-2 no-scrollbar">
             {navItems.map((item) => (
               <Button
                 key={item.label}
@@ -75,7 +75,7 @@ const Navbar = () => {
                 onClick={() => scrollToSection(item.href)}
                 className={`transition-all text-sm xl:text-base ${
                   activeSection === item.href.substring(1)
-                    ? "text-portfolio-primary font-medium"
+                    ? "text-portfolio-primary font-medium shadow-md"
                     : "text-foreground/80 hover:text-foreground"
                 }`}
               >
@@ -107,7 +107,7 @@ const Navbar = () => {
                 onClick={() => scrollToSection(item.href)}
                 className={`w-full justify-start ${
                   activeSection === item.href.substring(1)
-                    ? "text-portfolio-primary font-medium"
+                    ? "text-portfolio-primary font-medium shadow-md"
                     : "text-foreground/80"
                 }`}
               >

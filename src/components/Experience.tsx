@@ -1,7 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BriefcaseIcon, CalendarIcon } from "lucide-react";
+import { ArrowDown, ArrowDown01Icon, BriefcaseIcon, CalendarIcon } from "lucide-react";
 
 const experiences = [
   {
@@ -51,7 +51,7 @@ const experiences = [
 const Experience = () => {
   return (
     <section id="experience" className="section-container bg-slate-50 dark:bg-gray-900">
-      <h2 className="section-title">Work Experience</h2>
+      <h2 className="section-title">Experience</h2>
       
       <div className="space-y-10 mt-8">
         {experiences.map((exp, index) => (
@@ -91,14 +91,25 @@ const Experience = () => {
                   ))}
                 </ul>
                 
-                <div className="flex flex-wrap gap-2 mt-4">
+                <div className="flex max-md:flex-col gap-5 itema-center justify-between ">
+
+                  <div className="flex flex-wrap gap-2 mt-4">
                   {exp.skills.map((skill, i) => (
                     <Badge key={i} variant="secondary" className="bg-portfolio-primary/10 hover:bg-transparent cursor-default hover:border-portfolio-primary text-portfolio-primary">
                       {skill}
                     </Badge>
                   ))}
                 </div>
+
+                  <p className="text-portfolio-primary hover:text-portfolio-light text-sm flex items-center tracking-tighter"><span>Read More</span><span><ArrowDown size={14} className="text-sm"></ArrowDown></span></p>
+                </div>
+                
+
+
+
               </CardContent>
+
+
             </Card>
           </div>
         ))}

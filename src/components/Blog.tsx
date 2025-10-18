@@ -8,21 +8,22 @@ import { CalendarDays, Clock, ArrowRight } from "lucide-react";
 const blogPosts = [
   {
     title: "Getting Started with React Hooks",
-    excerpt: "Learn the fundamentals of React Hooks and how they can simplify your component logic and state management.",
-    date: "April 10, 2024",
-    readTime: "5 min read",
+    excerpt: "Learn the fundamentals of React Hooks and how they can simplify your component logic and state management.[FOR Beginners]",
+    date: "January  19, 2023",
+    readTime: "5-10 min read",
     image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?q=80&w=2670&auto=format&fit=crop",
     tags: ["React", "Hooks", "JavaScript"],
-    link: "#"
+    link: "https://www.freecodecamp.org/news/full-guide-to-react-hooks/",
+    author:"German COCCA"
   },
   {
     title: "Building Responsive UIs with Tailwind CSS",
     excerpt: "Discover how to create beautiful, responsive user interfaces quickly using the utility-first approach of Tailwind CSS.",
-    date: "March 25, 2024",
-    readTime: "8 min read",
+    date: "April 28, 2025",
+    readTime: "5 min read",
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2670&auto=format&fit=crop",
     tags: ["Tailwind CSS", "UI Design", "CSS"],
-    link: "#"
+    link: "https://namastedev.com/blog/building-responsive-ui-with-tailwind-css/"
   },
   {
     title: "TypeScript Best Practices for React Developers",

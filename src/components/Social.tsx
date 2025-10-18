@@ -1,8 +1,9 @@
 
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Card, CardContent } from "@/components/ui/card";
-import { Camera, Image, Instagram, Youtube } from "lucide-react";
+import { Camera, GitBranchIcon, Image, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import GitHub from "./GitHub";
 
 const socialImages = [
   {
@@ -28,29 +29,29 @@ const socialImages = [
   {
     url: "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2580&auto=format&fit=crop",
     title: "Team meeting"
-  }
+  },
 ];
 
 const Social = () => {
   return (
     <section id="social" className="section-container bg-slate-50 dark:bg-gray-900">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
-        <h2 className="section-title">Lifestyle</h2>
+        <h2 className="section-title">Social Lifestyle</h2>
         
         <div className="flex space-x-4 mt-4 md:mt-0">
           <Button variant="outline" size="sm" className="flex items-center gap-2">
-            <Instagram size={18} />
-            Instagram
+            <Linkedin size={18} />
+           Linkedln
           </Button>
           <Button variant="outline" size="sm" className="flex items-center gap-2">
-            <Youtube size={18} />
-            YouTube
+            <GitBranchIcon size={18} />
+          Github
           </Button>
         </div>
       </div>
       
       <p className="text-lg text-muted-foreground mb-8">
-        A glimpse into my everyday life as a developer, my workspace, coding sessions, and more.
+        A glimpse into my everyday life as a developer, my workspace, coding sessions, Events and more.
       </p>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

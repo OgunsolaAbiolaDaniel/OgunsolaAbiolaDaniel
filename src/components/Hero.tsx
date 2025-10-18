@@ -1,5 +1,5 @@
 
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Eye } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
@@ -16,16 +16,16 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
         <div className="space-y-6 md:space-y-8 animate-fade-in py-8 md:py-0">
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white break-words">
-            <span className="block">ABIOLA DANIEL</span>
+            <span className="block">ABIOLA</span>
             <span className="block mt-2 text-portfolio-accent">OGUNSOLA</span>
           </h1>
           
           <h2 className="text-xl sm:text-2xl md:text-4xl font-semibold text-gray-100">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-portfolio-accent to-white">React Developer</span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-portfolio-accent to-white">Your Friendly Software Engineer</span>
           </h2>
           
           <p className="mt-4 md:mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-200 px-2">
-            Building responsive, user-friendly web applications with clean and efficient code.
+           Loves to Buid responsive, user-friendly web applications with clean and efficient code.
           </p>
           
           <div className="mt-6 md:mt-10 flex flex-col sm:flex-row gap-4 justify-center">
@@ -48,7 +48,7 @@ const Hero = () => {
                 window.open('/Abiola_Daniel_CV.pdf', '_blank');
               }}
             >
-              View Cv
+             <Eye></Eye> View Cv
             </Button>
           </div>
         </div>

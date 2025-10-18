@@ -8,7 +8,7 @@ interface HobbyProps {
 }
 
 const HobbyCard = ({ icon, title, description }: HobbyProps) => (
-  <Card className="card-hover backdrop-blur-sm bg-white/20 dark:bg-gray-900/30 border border-white/10 h-full">
+  <Card className="card-hover backdrop-blur-sm bg-white/20 dark:bg-gray-900/10 border border-white/10 h-full">
     <CardHeader className="pb-2">
       <div className="flex items-center gap-2">
         <div className="text-portfolio-primary">{icon}</div>

@@ -10,10 +10,10 @@ import emailjs from 'emailjs-com';
 const contactInfo = {
   email: "danabiola300@gmail.com",
   workEmail: "habiolaogunsola@gmail.com",
-  location: "Seixal, Setúbal, Portugal",
+  location: "Amora, Seixal, Setúbal, Portugal",
   linkedin: "www.linkedin.com/in/abiola-daniel-ogunsola",
   github: "https://github.com/OgunsolaAbiolaDaniel",
-  cvLink: "/Abiola_Daniel_CV.pdf" // This will be the path to your CV file
+  cvLink: "/Abiola_Daniel_CV.pdf" 
 };
 
 const Contact = () => {
