@@ -2,7 +2,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useRef, useState } from "react";
-import { ArrowDown,ArrowUp ,CalendarIcon } from "lucide-react";
+import { ArrowDown, ArrowUp, CalendarIcon } from "lucide-react";
 import Additionalctx from "./Additionalctx";
 
 const experiences = [
@@ -52,14 +52,15 @@ const experiences = [
     function:"My tasks included creating responsive web pages, integrating interactive elements, and ensuring cross-browser compatibility. I maintained project documentation and used version control to manage code changes. This experience strengthened my time management, attention to detail, and practical problem-solving abilities."
   }
 ];
+const  hoverstyl= "text-transparent bg-gradient-to-br from-portfolio-primary  to-portfolio-light"
 
 const Experience = () => {
-  const [viewMore, setViewMore] = useState(false);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
-  function handleReadmore() {
-    setViewMore(!viewMore);
+
+  function handleReadmore(index: number) {
+    setExpandedIndex((prev) => (prev === index ? null : index));
   }
-  const Icon = viewMore ? ArrowUp : ArrowDown;
 
 
   return (
@@ -67,80 +68,92 @@ const Experience = () => {
       <h2 className="section-title">Experience</h2>
       
       <div className="space-y-10 mt-8">
-        {experiences.map((exp, index) => (
-          <div 
-            key={index} 
-            className="relative" 
-            data-aos="fade-up" 
-            data-aos-delay={index * 100}
-          >
-            {index < experiences.length - 1 && (
-              <div className="absolute left-[26px] top-14 bottom-0 w-1 bg-portfolio-primary/20 -z-10"></div>
-            )}
-            
-            <Card className="border-l-4 border-l-portfolio-primary shadow-md card-hover">
-              <CardHeader className="pb-2">
-                <div className="flex justify-between items-start">
-                  <div className="space-y-1">
-                    <CardTitle className="text-xl font-bold text-portfolio-primary">
-                      {exp.position}
-                    </CardTitle>
-                    <p className="text-lg font-semibold">{exp.company}</p>
-                  </div>
-                  <div className="flex items-center text-gray-500 text-sm">
-                    <CalendarIcon className="h-4 w-4 mr-1" />
-                    {exp.period}
-                  </div>
-                </div>
-              </CardHeader>
-              
-              <CardContent>
-                <ul className="space-y-2 mb-4 text-gray-700 dark:text-gray-300">
-                  {exp.description.map((item, i) => (
-                    <li key={i} className="flex">
-                      <span className="mr-2 text-portfolio-accent">•</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <div className="flex max-md:flex-col gap-5 itema-center justify-between ">
+        {experiences.map((exp, index) => {
+          const isExpanded = expandedIndex === index;
+          const Icon = isExpanded ? ArrowUp : ArrowDown;
 
-                  <div className="flex flex-wrap gap-2 mt-4">
-                  {exp.skills.map((skill, i) => (
-                    <Badge key={i} variant="secondary" className="bg-portfolio-primary/10 hover:bg-transparent cursor-default hover:border-portfolio-primary text-portfolio-primary">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
+          return (
+            <div
+              key={index}
+              className="relative"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
+              {index < experiences.length - 1 && (
+                <div className="absolute left-[26px] top-14 bottom-0 w-1 bg-portfolio-primary/20 -z-10"></div>
+              )}
 
-                  <p className="text-portfolio-primary hover:underline text-sm flex items-center cursor-pointer tracking-tighter" onClick={handleReadmore}>
-                    <span>{!viewMore ? "Read More" : "Show Less"}</span>
-                    <span><Icon size={14} className="text-sm"></Icon></span></p>
-                </div>
-                <div
-                  className={`overflow-hidden transition-all duration-500 ease-in-out ${viewMore ? "mt-4 opacity-100" : "max-h-0 opacity-0 pointer-events-none"}`}
-                  style={{
-                    maxHeight: viewMore
-                      ? `${contentRefs.current[index]?.scrollHeight ?? 0}px`
-                      : "0px",
-                  }}
-                >
+              <Card className={`border-l-4 border-l-portfolio-primary shadow-md card-hover`}>
+                <CardHeader className="pb-2">
+                  <div className="flex justify-between items-start">
+                    <div className="space-y-1">
+                      <CardTitle className="text-xl font-bold text-portfolio-primary">
+                        {exp.position}
+                      </CardTitle>
+                      <p className="text-lg font-semibold">{exp.company}</p>
+                    </div>
+                    <div className="flex items-center text-gray-500 text-sm">
+                      <CalendarIcon className="h-4 w-4 mr-1" />
+                      {exp.period}
+                    </div>
+                  </div>
+                </CardHeader>
+
+                <CardContent>
+                  <ul className="space-y-2 mb-4 text-gray-700 dark:text-gray-300">
+                    {exp.description.map((item, i) => (
+                      <li key={i} className="flex">
+                        <span className="mr-2 text-portfolio-accent">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex max-md:flex-col gap-5 itema-center justify-between ">
+                    <div className="flex flex-wrap gap-2 mt-4">
+                      {exp.skills.map((skill, i) => (
+                        <Badge
+                          key={i}
+                          variant="secondary"
+                          className="bg-portfolio-primary/10 hover:bg-transparent cursor-default hover:border-portfolio-primary text-portfolio-primary"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    <p
+                      className="text-portfolio-primary hover:underline text-sm flex items-center cursor-pointer tracking-tighter"
+                      onClick={() => handleReadmore(index)}
+                    >
+                      <span>{isExpanded ? "Show Less" : "Read More"}</span>
+                      <span>
+                        <Icon size={14} className="text-sm" />
+                      </span>
+                    </p>
+                  </div>
+
                   <div
-                    ref={(el) => {
-                      contentRefs.current[index] = el;
+                    className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? "mt-4 opacity-100" : "max-h-0 opacity-0 pointer-events-none"}`}
+                    style={{
+                      maxHeight: isExpanded
+                        ? `${contentRefs.current[index]?.scrollHeight ?? 0}px`
+                        : "0px",
                     }}
                   >
-                    <Additionalctx arg={exp.function}></Additionalctx>
+                    <div
+                      ref={(el) => {
+                        contentRefs.current[index] = el;
+                      }}
+                    >
+                      <Additionalctx arg={exp.function}></Additionalctx>
+                    </div>
                   </div>
-                </div>
-
-              </CardContent>
-
-
-            </Card>
-          </div>
-        ))}
+                </CardContent>
+              </Card>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
