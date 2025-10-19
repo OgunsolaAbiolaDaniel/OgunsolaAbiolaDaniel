@@ -1,7 +1,9 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowDown, ArrowDown01Icon, BriefcaseIcon, CalendarIcon } from "lucide-react";
+import { useRef, useState } from "react";
+import { ArrowDown,ArrowUp ,CalendarIcon } from "lucide-react";
+import Additionalctx from "./Additionalctx";
 
 const experiences = [
   {
@@ -15,7 +17,8 @@ const experiences = [
       "Optimized web performance, including improving page load times and ensuring efficient data handling",
       "Participated in code reviews, testing and debugging web applications"
     ],
-    skills: ["React", "TypeScript", "Next.js", "RESTful APIs", "Responsive Design"]
+    skills: ["React", "TypeScript", "Next.js", "RESTful APIs", "Responsive Design"],
+     function:"My main responsibilities included contributing to the development and maintenance of web applications, collaborating with senior developers to implement user-friendly features, and integrating RESTful APIs. I also took part in code reviews, testing, and debugging to ensure high-quality results. Through this role, I developed strong communication, teamwork, and problem-solving skills."
   },
   {
     company: "BINCOM DEV-CENTER NIGERIA",
@@ -30,7 +33,8 @@ const experiences = [
       "Used HTML, CSS, and JavaScript to build and maintain mobile web views",
       "Debugged and resolved technical issues to improve app functionality"
     ],
-    skills: ["Cordova", "JavaScript", "HTML", "CSS", "Mobile Development", "Cross-platform"]
+    skills: ["Cordova", "JavaScript", "HTML", "CSS", "Mobile Development", "Cross-platform"],
+     function:"I was responsible for developing and maintaining mobile applications, translating business requirements into functional solutions, and optimizing app performance. I worked closely with cross-functional teams and helped resolve technical issues efficiently. This internship helped me improve my adaptability, technical communication, and ability to work independently and as part of a team."
   },
   {
     company: "INTERNCHOICE India",
@@ -44,11 +48,20 @@ const experiences = [
       "Performed testing and debugging for cross-browser compatibility",
       "Maintained detailed documentation and used version control (Git)"
     ],
-    skills: ["HTML", "CSS", "JavaScript", "Responsive Design", "Git"]
+    skills: ["HTML", "CSS", "JavaScript", "Responsive Design", "Git"],
+    function:"My tasks included creating responsive web pages, integrating interactive elements, and ensuring cross-browser compatibility. I maintained project documentation and used version control to manage code changes. This experience strengthened my time management, attention to detail, and practical problem-solving abilities."
   }
 ];
 
 const Experience = () => {
+  const [viewMore, setViewMore] = useState(false);
+  const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+  function handleReadmore() {
+    setViewMore(!viewMore);
+  }
+  const Icon = viewMore ? ArrowUp : ArrowDown;
+
+
   return (
     <section id="experience" className="section-container bg-slate-50 dark:bg-gray-900">
       <h2 className="section-title">Experience</h2>
@@ -101,11 +114,26 @@ const Experience = () => {
                   ))}
                 </div>
 
-                  <p className="text-portfolio-primary hover:text-portfolio-light text-sm flex items-center tracking-tighter"><span>Read More</span><span><ArrowDown size={14} className="text-sm"></ArrowDown></span></p>
+                  <p className="text-portfolio-primary hover:underline text-sm flex items-center cursor-pointer tracking-tighter" onClick={handleReadmore}>
+                    <span>{!viewMore ? "Read More" : "Show Less"}</span>
+                    <span><Icon size={14} className="text-sm"></Icon></span></p>
                 </div>
-                
-
-
+                <div
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${viewMore ? "mt-4 opacity-100" : "max-h-0 opacity-0 pointer-events-none"}`}
+                  style={{
+                    maxHeight: viewMore
+                      ? `${contentRefs.current[index]?.scrollHeight ?? 0}px`
+                      : "0px",
+                  }}
+                >
+                  <div
+                    ref={(el) => {
+                      contentRefs.current[index] = el;
+                    }}
+                  >
+                    <Additionalctx arg={exp.function}></Additionalctx>
+                  </div>
+                </div>
 
               </CardContent>
 

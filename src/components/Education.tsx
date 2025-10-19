@@ -28,10 +28,10 @@ const Education = () => {
               <span className="text-sm sm:text-base">Jul 2025 -&gt; Present</span>
             </div>
             
-            <p className="text-base sm:text-lg">
-              Currently pursuing a degree in Computer Engineering, focusing on software development, 
+            <p className="text-sm sm:text-sm sm:px-4">
+              "Currently pursuing a degree in Computer Engineering, focusing on software development, 
               algorithms, data structures, and building foundational knowledge for a successful 
-              career in development.
+              career in development."
             </p>
             
             <div className="flex items-center mt-4">
@@ -88,11 +88,10 @@ const Education = () => {
               <span className="text-sm sm:text-base">OCT 2024 -&gt;JUL 2025</span>
             </div>
             
-            <p className="text-base sm:text-lg">
-              Currently pursuing a degree in Computer Engineering, focusing on software development, 
-              algorithms, data structures, and building foundational knowledge for a successful 
-              career in development.
-            </p>
+            <p className="text-sm sm:text-sm sm:px-4">
+           " I began my studies in Computer Science at the University of Évora, completing my first year before transferring to NOVA FCT, where I am now pursuing a bachelor’s degree in Computer Engineering.
+            My focus areas include software development, algorithms, and data structures, with a strong interest in building a solid foundation for a career in tech. I’ve been involved in both academic and extracurricular projects, always aiming to develop my problem-solving and practical programming skills.
+            "</p>
             
             <div className="flex items-center mt-4">
               <GraduationCap className="h-5 w-5 sm:h-6 sm:w-6 text-portfolio-accent mr-2" />

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 
-function Additionalctx(arg:string) {
+function Additionalctx({arg:string}) {
   return (
-      <p className="text-lg leading-relaxed">{arg}</p>
+      <p className="text-base cursor-none leading-relaxed py-4 ml-4 mt-4">"{string}"</p>
   )
 }
 
