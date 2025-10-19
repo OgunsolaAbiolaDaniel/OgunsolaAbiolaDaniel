@@ -11,17 +11,19 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-hero dark:from-gray-900 dark:via-indigo-950 dark:to-gray-900 relative">
+    <section className="min-h-screen w-screen overflow-hidden flex items-center justify-center bg-gradient-hero dark:from-gray-900 dark:via-indigo-950 dark:to-gray-900">
       <div className="absolute inset-0 bg-gradient-to-br from-portfolio-primary/10 to-portfolio-accent/10 backdrop-blur-sm"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
+      <div className=" mx-auto  px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full">
+       
+       
         <div className="space-y-6 md:space-y-8 animate-fade-in py-8 md:py-0">
-          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-white break-words">
-            <span className="block">ABIOLA</span>
-            <span className="block mt-2 text-portfolio-accent">OGUNSOLA</span>
+          <h1 className="text-4xl relative sm:text-5xl md:text-7xl font-bold tracking-tight text-white break-words">
+         <div className='block'><span className="text-portfolio-light ml-[10] md:ml-[-100px] mt-[-100px] absolute">&gt; </span><span className="bg-clip-text text-transparent bg-gradient-to-b from-portfolio-light  to-portfolio-accent">_Abiola_</span><span className="z-30 bg-clip-text text-transparent bg-gradient-to-br from-portfolio-primary to-portfolio-light">Daniel</span></div>   
+            <span className="mt-2  md:mb-9 bg-clip-text text-transparent bg-gradient-to-b from-portfolio-light  to-portfolio-accent">OGUNSOLA_ <span className="text-portfolio-light absolute mt-8  md:ml-[100px]"> &lt;</span></span> 
           </h1>
           
-          <h2 className="text-xl sm:text-2xl md:text-4xl font-semibold text-gray-100">
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-portfolio-accent to-white">Your Friendly Software Engineer</span>
+          <h2 className="text-xl pt-6 md:pt-10 sm:text-2xl md:text-4xl font-semibold text-gray-100">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-portfolio-accent to-white">_Your_Friendly_Software_Engineer_</span>
           </h2>
           
           <p className="mt-4 md:mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-200 px-2">
@@ -37,7 +39,7 @@ const Hero = () => {
                 if (contactSection) contactSection.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Contact Me
+              Contact_Me
             </Button>
             
             <Button
