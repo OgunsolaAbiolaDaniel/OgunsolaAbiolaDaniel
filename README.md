@@ -31,6 +31,7 @@
     <li> User Interface Design</li> 
     <li>Component Development</li>
     <li>Design Systems</li>
+    <li>Programming Languages: JavaScript, C programming , Java</li>
     <li>Responsive & Accessible UI Core Technologies</li>
     <li>Design Tools – Figma, InVision</li>
     <li>Frontend – JavaScript, TypeScript, React, Next.js, Tailwind CSS, Bootstrap, HTML, CSS </li>
